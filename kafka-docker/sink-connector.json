@@ -1,0 +1,30 @@
+{
+    "name": "sql-sink-connector",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "tasks.max": "1",
+      "topics": "BAS-DGS-STG.dbo.tbLastWagerInsert",  
+      "connection.url": "jdbc:sqlserver://BAS-DGS-STG:1433;databaseName=TokyoData",
+      "connection.user": "carlos.aguero",
+      "connection.password": "100.Positivo",
+      "auto.create": "false",       
+      "auto.evolve": "true",        
+      "insert.mode": "upsert",  
+      "pk.fields":"WagerNumber",
+      "pk.mode": "record_key",
+      "table.name.format": "LastWagerInsert",
+      "batch.size": "3000",
+      "key.converter": "io.confluent.connect.avro.AvroConverter",
+      "key.converter.schema.registry.url":  "http://schema-registry:8081/",
+      "value.converter": "io.confluent.connect.avro.AvroConverter",
+      "value.converter.schema.registry.url":  "http://schema-registry:8081/",
+      "transforms": "TimestampInsertConverter, TimestampValueConverter",
+      "transforms.TimestampInsertConverter.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
+      "transforms.TimestampInsertConverter.field": "InsertDateTime",
+      "transforms.TimestampInsertConverter.target.type": "Timestamp",
+      "transforms.TimestampValueConverter.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
+      "transforms.TimestampValueConverter.field": "ValueDate",
+      "transforms.TimestampValueConverter.target.type": "Timestamp"
+    }
+  }
+  
