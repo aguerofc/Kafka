@@ -1,0 +1,12 @@
+[Unit]
+Description=Kafka Connect service
+After=network.target
+
+[Service]
+Type=simple
+User=kafka
+ExecStart=/etc/kafka/bin/connect-distributed.sh /etc/kafka/config/connect-distributed.properties
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
