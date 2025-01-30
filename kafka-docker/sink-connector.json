@@ -10,6 +10,7 @@
       "auto.create": "false",       
       "auto.evolve": "true",        
       "insert.mode": "upsert",  
+      "delete.enabled" : "true",
       "pk.fields":"WagerNumber",
       "pk.mode": "record_key",
       "table.name.format": "LastWagerInsert",
