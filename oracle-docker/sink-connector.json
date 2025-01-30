@@ -1,0 +1,17 @@
+{
+    "name": "sql-sink-connector",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "tasks.max": "1",
+      "topics": "BAS-PDC-01.dbo.tbLastWagerInsert",  
+      "connection.url": "jdbc:sqlserver://10.54.8.200:1433;databaseName=TokyoData",
+      "connection.user": "dgs_sports",
+      "connection.password": "TempPass*2023",
+      "auto.create": "true",
+      "auto.evolve": "true",
+      "insert.mode": "insert",
+      "pk.mode": "none",
+      "table.name.format": "dbo.LastWagerInsert"  
+    }
+  }
+  

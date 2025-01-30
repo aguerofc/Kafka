@@ -1,0 +1,20 @@
+{
+    "name": "sqlserver-connector",
+    "config": {
+      "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+      "tasks.max": "1",
+      "database.hostname": "10.54.8.200",
+      "database.port": "1433",
+      "database.user": "dgs_sports",
+      "database.password": "TempPass*2023",
+      "database.dbname": "TokyoData",
+      "database.server.name": "BAS-PDC-01",
+      "table.include.list":  "dbo.GAME,dbo.GAMEVALUES,dbo.WAGERHEADER",
+      "database.history.kafka.bootstrap.servers": "kafka:9092",
+      "database.history.kafka.topic": "schema-changes.sqlserver",
+      "database.connection.url": "jdbc:sqlserver://10.54.8.200:1433;databaseName=TokyoData;user=dgs_sports;password=TempPass*2023",
+      "database.connection.user": "dgs_sports",
+      "database.connection.password": "TempPass*2023",
+      "table.whitelist": "dbo.GAME,dbo.GAMEVALUES,dbo.WAGERHEADER"
+    }
+  }

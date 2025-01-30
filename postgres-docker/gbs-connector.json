@@ -1,0 +1,20 @@
+{
+    "name": "sql-gbs-connector",
+    "config": {
+      "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+      "tasks.max": "1",
+      "database.hostname": "10.54.8.200",
+      "database.port": "1433",
+      "database.user": "dgs_sports",
+      "database.password": "TempPass*2023",
+      "database.dbname": "GBSDb",
+      "database.server.name": "BAS-PDC-01",
+      "table.include.list":  "dbo.tbLastWagerInsert",
+      "database.history.kafka.bootstrap.servers": "kafka:9092",
+      "database.history.kafka.topic": "schema-changes.gbs",
+      "database.connection.url": "jdbc:sqlserver://10.54.8.200:1433;databaseName=TokyoData",
+      "database.connection.user": "dgs_sports",
+      "database.connection.password": "TempPass*2023",
+      "table.whitelist": "dbo.tbLastWagerInsert"
+    }
+  }

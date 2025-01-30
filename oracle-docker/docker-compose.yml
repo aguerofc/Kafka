@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  oracle-db:
+    image: gvenzl/oracle-free:latest
+    environment:
+      ORACLE_PASSWORD: 12345
+      APP_USER: test
+      APP_USER_PASSWORD: 123456
+    ports:
+      - 1521:1521
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - oracle-backup:/opt/oracle/backup
+
+volumes:
+  oracle-data:
+  oracle-backup:
