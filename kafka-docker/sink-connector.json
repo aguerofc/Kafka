@@ -6,7 +6,7 @@
       "topics": "BAS-DGS-STG.dbo.tbLastWagerInsert",  
       "connection.url": "jdbc:sqlserver://BAS-DGS-STG:1433;databaseName=TokyoData",
       "connection.user": "carlos.aguero",
-      "connection.password": "100.Positivo",
+      "connection.password": "300.Positivo",
       "auto.create": "false",       
       "auto.evolve": "true",        
       "insert.mode": "upsert",  
