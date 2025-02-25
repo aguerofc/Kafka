@@ -10,7 +10,7 @@
       "database.hostname": "10.54.8.200",
       "database.port": "1433",
       "database.user": "carlos.aguero",
-      "database.password": "100.Positivo",
+      "database.password": "300.Positivo",
       "database.dbname": "GBSDb",
       "database.server.name": "BAS-DGS-STG",
       "table.include.list":  "dbo.tbLastWagerInsert",
