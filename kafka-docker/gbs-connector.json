@@ -18,7 +18,7 @@
       "database.history.kafka.topic": "schema-changes.gbs",
       "database.connection.url": "jdbc:sqlserver://BAS-DGS-STG:1433;databaseName=GBSDb",
       "database.connection.user": "carlos.aguero",
-      "database.connection.password": "100.Positivo",
+      "database.connection.password": "300.Positivo",
       "transforms": "unwrap",
       "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState"
     }
